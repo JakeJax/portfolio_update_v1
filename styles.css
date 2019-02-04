@@ -55,7 +55,7 @@ a:hover {
   color: white
 }
 
-header {
+.main-header {
   text-align: center;
   background: url('images/background_pic.jpg') no-repeat top center ;
   background-size: cover;
@@ -65,17 +65,52 @@ header {
 header {
   line-height: 1.5;
 }
-header .profile-image {
+/*header > .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  border: 4px dashed black;
+  border-radius: 25%;
+  transform: rotate;
+  border: 4px dashed white;
   transition: all .5s;
+}*/
+header > .profile-image {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  border: 5px dashed white;
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-direction: alternate;
+  animation-iteration-count: 3;
+  animation-fill-mode: none;
+  animation-play-state: running;
 }
-header .profile-image:hover {
-  transform: scale(1.3) rotate(720deg);
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    border-radius: 100%;
+    border: 4px dashed white;
+  }
+  50% {
+    border: 4px dashed white;
+  }
+  100% {
+    transform: scale(1);
+    border: 4px dashed white;
+  }
 }
+
+.experience-header {
+  text-align: center;
+  background: white ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
 .tag {
   background-color: #efefef;
   color: black;
@@ -119,6 +154,20 @@ ul.skills {
 .skills li:nth-child(odd) {
   background: #666;
   color: #efefef;
+}
+
+.videogame-pic {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.skills-pic {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
 }
 
 footer {
@@ -180,7 +229,7 @@ a.social:hover {
       margin: 0 auto;
   }
 
-  header {
+  .main-header {
     min-height: 470px;
   }
 
